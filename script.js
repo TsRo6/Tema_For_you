@@ -66,7 +66,21 @@ petsCare()
 
 // e) numarul norocos al patronului este 7. Daca la orice moment cand viziteaza hotelul (este si el acolo!) numarul total al fiintelor din interior este multiplu de 7, fiecare angajat va primi un bonus de 100 de lei. Calculati si afisati in consola cati bani il va costa o astfel de vizita.
 
+function bonus(){
+    var inside = maxPets + numberOfEmployees + 1;
+    var luckyNumber = 7;
+    var  multipleOf = inside % luckyNumber;
 
+    if( multipleOf == 0){
+        var money = numberOfEmployees * 100;
+        console.log('Boss expenses:', money);
+    } else{
+        console.log('Bad luck');
+    }
+
+}
+
+bonus()
 
 
 // f) daca avem un numar impar de caini si un numar impar de pisici, afisam "Paritate SI"
